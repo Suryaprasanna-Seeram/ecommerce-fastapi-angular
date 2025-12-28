@@ -27,6 +27,7 @@ The project demonstrates JWT authentication, role-based access (User/Admin), RES
 **Project Structure**
 
 ecommerce-project/
+
 │
 ├── backend/
 │   ├── main.py
@@ -118,13 +119,17 @@ ecommerce-project/
   python -m venv venv
 
 2. Activate Virtual Environment
+   
   Windows
+  
   venv\Scripts\activate
 
 3. Install Dependencies
+   
   pip install fastapi uvicorn mysql-connector-python python-jose passlib[bcrypt] python-dotenv python-multipart
 
 4. Configure Environment Variables
+   
   Create .env inside backend/:
 
       DB_HOST=localhost
@@ -133,7 +138,7 @@ ecommerce-project/
       DB_NAME=ecommerce
       SECRET_KEY=your_secret_key
    
-6. Run Backend Server
+5. Run Backend Server
    
  uvicorn main:app --reload
 Backend runs at:
