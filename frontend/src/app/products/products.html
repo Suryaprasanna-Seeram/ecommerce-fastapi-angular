@@ -1,0 +1,31 @@
+<div class="page-container">
+<h2>Products</h2>
+
+<p *ngIf="error" style="color:red">{{ error }}</p>
+
+<ul>
+  <li *ngFor="let p of products">
+    <b>{{ p.name }}</b><br />
+    {{ p.description }}<br />
+    ₹{{ p.price }}
+  </li>
+</ul>
+
+<h2>Products</h2>
+
+<p *ngIf="error" style="color:red">{{ error }}</p>
+
+<ul>
+  <li *ngFor="let p of products">
+    <b>{{ p.name }}</b><br />
+    {{ p.description }}<br />
+    ₹{{ p.price }}<br />
+
+    <button id="bt1" (click)="addToCart(p.id)">
+      Add to Cart
+    </button>
+
+    <hr />
+  </li>
+</ul>
+</div>

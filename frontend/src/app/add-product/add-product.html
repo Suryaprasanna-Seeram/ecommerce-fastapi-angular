@@ -1,0 +1,32 @@
+<div class="page-container">
+  <h2>Add Product</h2>
+
+  <form (ngSubmit)="addProduct()">
+
+    <div>
+      <label>Product Name</label>
+      <input type="text" [(ngModel)]="name" name="name" required />
+    </div>
+
+    <br />
+
+    <div>
+      <label>Description</label>
+      <textarea [(ngModel)]="description" name="description" required></textarea>
+    </div>
+
+    <br />
+
+    <div>
+      <label>Price</label>
+      <input type="number" [(ngModel)]="price" name="price" required />
+    </div>
+
+    <br />
+
+    <button type="submit">Add Product</button>
+  
+
+  <p id=para1 *ngIf="message">{{ message }}</p>
+  </form>
+</div>

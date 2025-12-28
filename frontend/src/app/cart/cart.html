@@ -1,0 +1,28 @@
+<div class="page-container">
+<h2>My Cart</h2>
+
+<p *ngIf="error" style="color:red">{{ error }}</p>
+
+<ul *ngIf="cartItems.length > 0">
+  <li *ngFor="let item of cartItems">
+    <b>{{ item.name }}</b><br />
+    Quantity: {{ item.quantity }}<br />
+    Price: ₹{{ item.price }}<br />
+
+    <button (click)="removeItem(item.id)">
+    Remove
+    </button>
+
+
+    <hr />
+  </li>
+</ul>
+
+<p id="ce1" *ngIf="cartItems.length === 0">
+  Cart is empty
+</p>
+
+<p id="c1" *ngIf="message" style="color:green">{{ message }}</p>
+<p *ngIf="error" style="color:red">{{ error }}</p>
+
+</div>

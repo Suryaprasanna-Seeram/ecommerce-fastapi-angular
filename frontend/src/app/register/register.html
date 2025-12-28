@@ -1,0 +1,115 @@
+<div class="page-container">
+<h2>Register</h2>
+<br>
+
+<form #f="ngForm"(ngSubmit)="register(f)">
+
+  <div>
+    <label>First Name</label>
+    <input placeholder="First Name"
+      type="text"
+      name="firstname"
+      [(ngModel)]="firstname"
+      required
+    /><br/> <br/>
+  </div>
+
+  <div>
+    <label>Last Name</label>
+    <input
+      placeholder="Last Name"
+      type="text"
+      name="lastname"
+      [(ngModel)]="lastname"
+      required
+    /> <br/> <br/>
+  </div>
+
+  <div>
+    <label>Phone</label>
+    <input
+      placeholder="e.g., 1234567890"
+      type="text"
+      name="phone"
+      [(ngModel)]="phone"
+      required
+      maxlength="10"
+      [pattern]="phonePattern"
+      #p="ngModel"
+    /> <br/> <br/>
+  </div>
+
+     <div class="error" *ngIf="p.invalid && p.touched">
+  <small *ngIf="p.errors?.['required']">
+    Phone number is required
+  </small>
+
+  <small *ngIf="p.errors?.['pattern']">
+    Phone number must be exactly 10 digits
+  </small>
+  </div>
+  
+  <div>
+    <label>Username</label>
+    <input
+      placeholder="Username"
+      type="text"
+      name="username"
+      [(ngModel)]="username"
+      required
+      minlength="3"
+      [pattern]="usernamePattern"
+      #u="ngModel"
+    /> <br/> <br/>
+  </div>
+
+  <div class="error" *ngIf="u.invalid && u.touched">
+  <small *ngIf="u.errors?.['required']">
+    Username is required
+  </small>
+
+  <small *ngIf="u.errors?.['minlength']">
+    Username must be at least 3 characters
+  </small>
+
+  <small *ngIf="u.errors?.['pattern']">
+    Username must start with letter/underscore, no spaces
+  </small>
+</div>
+
+
+  <div>
+    <label>Password</label>
+    <input
+      placeholder="Password"
+      type="password"
+      name="password"
+      [(ngModel)]="password"
+      required
+      minlength="6"
+      #pwd="ngModel"
+    /> <br/> <br/> 
+
+    <div class="error" *ngIf="pwd.invalid && pwd.touched">
+  <small *ngIf="pwd.errors?.['required']">
+    Password is required
+  </small>
+
+  <small *ngIf="pwd.errors?.['minlength']">
+    Password must be at least 6 characters
+  </small>
+  </div>
+  </div>
+
+
+
+
+  <button type="submit" [disabled]="f.invalid">
+  Register
+      </button>
+
+ 
+<p id="message1" *ngIf="message">{{ message }}</p>
+
+ </form>
+</div>

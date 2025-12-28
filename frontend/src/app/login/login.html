@@ -1,0 +1,35 @@
+<div class="page-container">
+<h2>Login</h2>
+<br>
+<form (ngSubmit)="login()">
+  <div>
+    <label>Username</label>
+    <input
+    placeholder="username"
+      type="text"
+      name="username"
+      [(ngModel)]="username"
+      required
+    />
+  </div>
+
+  <br />
+
+  <div>
+    <label>Password</label>
+    <input
+    placeholder="password"
+      type="password"
+      name="password"
+      [(ngModel)]="password"
+      required
+    />
+  </div>
+
+  <br />
+
+  <button type="submit">Login</button>
+</form>
+
+<p *ngIf="message">{{ message }}</p>
+</div>

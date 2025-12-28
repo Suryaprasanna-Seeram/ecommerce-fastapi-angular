@@ -1,0 +1,8 @@
+.page-container {
+  max-width: 400px;
+  margin: auto;
+}
+
+input, textarea {
+  width: 100%;
+}
