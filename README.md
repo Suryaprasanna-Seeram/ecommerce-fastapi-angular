@@ -70,6 +70,7 @@ ecommerce-project/
       USE ecommerce;
 
    2. Create Tables
+
      CREATE TABLE users (
       id INT AUTO_INCREMENT PRIMARY KEY,
       username VARCHAR(100) UNIQUE NOT NULL,
