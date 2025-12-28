@@ -7,22 +7,22 @@ The project demonstrates JWT authentication, role-based access (User/Admin), RES
  
 🔹 Backend
 
-=> Python 3.12+
-=> FastAPI
-=> MySQL 8.x
-=> Raw SQL (no ORM)
-=> JWT Authentication
-=> Pydantic Models
-=> MySQL Connector
+- Python 3.12+
+-  FastAPI
+-  MySQL 8.x
+- Raw SQL (no ORM)
+- JWT Authentication
+- Pydantic Models
+- MySQL Connector
 
 🔹 Frontend
 
-=> Angular (Standalone – latest)
-=> TypeScript
-=> HTML & CSS
+- Angular (Standalone – latest)
+-  TypeScript
+-   HTML & CSS
 
 🔹 Testing
-=> Cypress (E2E Automation)
+- Cypress (E2E Automation)
 
 **Project Structure**
 
@@ -57,20 +57,20 @@ ecommerce-project/
 
   1. User Features
      
-   => User Registration
-   => User Login (JWT authentication)
-   => View Products
-   => Add Product to Cart
-   => Update Cart Quantity
-   => Remove Product from Cart
-   => User-specific cart using JWT
+   - User Registration
+   - User Login (JWT authentication)
+   - View Products
+   - Add Product to Cart
+   - Update Cart Quantity
+   - Remove Product from Cart
+   - User-specific cart using JWT
 
   2. Admin Features
 
-   => Admin Login
-   => Add New Products
-   => Role-based UI 
-   => Protected Admin APIs
+   - Admin Login
+   - Add New Products
+   - Role-based UI
+   - Protected Admin APIs
 
 **Database Setup (MySQL)**
 
