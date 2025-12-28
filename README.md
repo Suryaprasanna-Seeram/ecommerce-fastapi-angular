@@ -4,7 +4,9 @@ A full-stack E-Commerce application built using FastAPI (backend) and Angular St
 The project demonstrates JWT authentication, role-based access (User/Admin), REST APIs, MySQL with raw SQL, and Cypress end-to-end automation testing.
 
  **Tech Stack**
+ 
 🔹 Backend
+
 => Python 3.12+
 => FastAPI
 => MySQL 8.x
@@ -14,6 +16,7 @@ The project demonstrates JWT authentication, role-based access (User/Admin), RES
 => MySQL Connector
 
 🔹 Frontend
+
 => Angular (Standalone – latest)
 => TypeScript
 => HTML & CSS
@@ -22,6 +25,7 @@ The project demonstrates JWT authentication, role-based access (User/Admin), RES
 => Cypress (E2E Automation)
 
 **Project Structure**
+
 ecommerce-project/
 │
 ├── backend/
@@ -49,7 +53,9 @@ ecommerce-project/
     └── angular.json
 
 **Features**
+
   1. User Features
+     
    => User Registration
    => User Login (JWT authentication)
    => View Products
@@ -59,13 +65,16 @@ ecommerce-project/
    => User-specific cart using JWT
 
   2. Admin Features
+
    => Admin Login
    => Add New Products
    => Role-based UI 
    => Protected Admin APIs
 
 **Database Setup (MySQL)**
+
    1. Create Database
+
       CREATE DATABASE ecommerce;
       USE ecommerce;
 
@@ -95,13 +104,16 @@ ecommerce-project/
       );
 
   3. Seed Sample Products
+
     INSERT INTO products (name, description, price) VALUES
     ('Laptop', 'High performance laptop', 75000),
     ('Phone', 'Smartphone with good camera', 30000),
     ('Headphones', 'Noise cancelling headphones', 5000);
 
   **Backend Setup & Run**
+  
 1. Create Virtual Environment
+
   cd backend
   python -m venv venv
 
@@ -114,30 +126,38 @@ ecommerce-project/
 
 4. Configure Environment Variables
   Create .env inside backend/:
+
       DB_HOST=localhost
       DB_USER=root
       DB_PASSWORD=your_mysql_password
-      DB_NAME=ecommerce_db
+      DB_NAME=ecommerce
       SECRET_KEY=your_secret_key
    
-5. Run Backend Server
+6. Run Backend Server
+   
  uvicorn main:app --reload
 Backend runs at:
+
  http://127.0.0.1:8000
  Swagger UI: http://127.0.0.1:8000/docs
 
 **Frontend Setup & Run**
+
 1. Install Dependencies
+
 cd frontend
 npm install
 
  2. Run Angular App
+
  ng serve
   Frontend runs at:
   http://localhost:4200
 
 **Cypress Automation Testing**
+
  Test Files
+ 
    - login.cy.js
    - register.cy.js
    - products.cy.js
@@ -147,12 +167,15 @@ npm install
    - main.cy.js (full flow)
 
  **Run Cypress (Interactive)**
+ 
   npx cypress open
 
  **Run Cypress (Headless)**
+ 
   npx cypress run
 
  **Notes**
+ 
   - JWT is used for securing APIs
   - Role-based access for Admin & User
   - Raw SQL is used instead of ORM
@@ -160,6 +183,7 @@ npm install
   - Cypress validates complete user & admin flows
 
  **Author**
+ 
 Seeram Surya Prasanna
 
 
